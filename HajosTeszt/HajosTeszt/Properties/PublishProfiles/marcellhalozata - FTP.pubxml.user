@@ -17,25 +17,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/11/2021 16:10:36</publishTime>
     </File>
     <File Include="HajosTeszt.deps.json">
-      <publishTime>02/18/2021 13:05:53</publishTime>
+      <publishTime>02/18/2021 15:52:00</publishTime>
     </File>
     <File Include="HajosTeszt.dll">
-      <publishTime>02/18/2021 12:53:45</publishTime>
+      <publishTime>02/18/2021 15:49:43</publishTime>
     </File>
     <File Include="HajosTeszt.exe">
-      <publishTime>02/18/2021 13:05:53</publishTime>
+      <publishTime>02/18/2021 15:52:00</publishTime>
     </File>
     <File Include="HajosTeszt.pdb">
-      <publishTime>02/18/2021 13:05:53</publishTime>
+      <publishTime>02/18/2021 15:52:00</publishTime>
     </File>
     <File Include="HajosTeszt.runtimeconfig.json">
       <publishTime>02/11/2021 16:45:11</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>02/18/2021 13:05:54</publishTime>
+      <publishTime>02/18/2021 15:52:00</publishTime>
     </File>
     <File Include="wwwroot/cv.html">
-      <publishTime>02/18/2021 13:05:49</publishTime>
+      <publishTime>02/18/2021 15:51:57</publishTime>
     </File>
     <File Include="wwwroot/index.html">
       <publishTime>02/11/2021 16:38:46</publishTime>
