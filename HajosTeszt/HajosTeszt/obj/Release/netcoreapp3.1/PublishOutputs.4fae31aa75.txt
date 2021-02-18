@@ -1,4 +1,5 @@
 C:\Users\gyetvai.marcell\Desktop\tanulás\hálózatok\HajosTeszt\HajosTeszt\obj\Release\netcoreapp3.1\PubTmp\Out\HajosTeszt.exe
+C:\Users\gyetvai.marcell\Desktop\tanulás\hálózatok\HajosTeszt\HajosTeszt\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\cv.html
 C:\Users\gyetvai.marcell\Desktop\tanulás\hálózatok\HajosTeszt\HajosTeszt\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\index.html
 C:\Users\gyetvai.marcell\Desktop\tanulás\hálózatok\HajosTeszt\HajosTeszt\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 C:\Users\gyetvai.marcell\Desktop\tanulás\hálózatok\HajosTeszt\HajosTeszt\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
