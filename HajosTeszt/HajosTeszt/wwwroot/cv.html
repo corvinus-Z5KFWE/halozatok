@@ -11,7 +11,7 @@
 
     h1 {
         color: ##000032;
-        border: 6px solid red;
+        border: 6px solid blue;
         letter-spacing: 5px;
         font-size: 50px;
         text-align: center;
@@ -19,7 +19,7 @@
 
     h2 {
         color: #000022;
-        border: 3px solid red;
+        border: 3px solid blue;
         letter-spacing: 1px;
         font-size: 20px;
         text-align: left;
@@ -54,6 +54,28 @@
         border-radius: 25px;
     }
 
+    a {
+        padding: 10px;
+        border-radius: 25px;
+        background-color: blue;
+        color: white;
+    }
+
+    a:hover {
+        
+            background-color: darkblue;
+    }
+
+    .kedvenkajak {
+        background-color: white;
+        width: 100px;
+        border-radius: 25px;
+    }
+
+    .kedvenkonyvek {
+        font-style: italic;
+    }
+
 </style>
 </head>
 <body>
@@ -70,13 +92,13 @@
     <a href="https://www.linkedin.com/in/marcell-gyetvai-841243199/" target="_blank">Ez a linkedin oldalam</a>
     <p>Kedvenc ételeim:</p>
     <div id="listak">
-        <ul>
+        <ul> class = "kedvenckonyvek">
             <li>Pizza</li>
             <li>Palacsinta</li>
             <li>Hasábburgonya</li>
         </ul>
         <p>Kedvenc könyveim:</p>
-        <ol>
+        <ol class="kedvenkonyvek">
             <li>Nando Parrado: Csoda az andokban</li>
             <li>Colin O' Brady: Nincs lehetetlen</li>
             <li>Jamie Vardy: A semmiből - Az én történetem</li>
