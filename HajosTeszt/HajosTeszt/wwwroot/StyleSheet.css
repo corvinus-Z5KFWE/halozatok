@@ -1,23 +1,2 @@
-﻿body {
-    background-color: #E1EEF7
-}
-
-h1, h2 {
-    color: #0F0235;
-    border: 3px solid red;
-    letter-spacing: 20px;
-    font-size: 50px;
-    text-align: center;
-}
-
-p {
-    text-indent: 50px;
-    font-family: arial;
-    font-style: italic;
-}
-
-    p::first-letter {
-        color: red;
-        font-size: 40px;
-    }
+﻿
 
