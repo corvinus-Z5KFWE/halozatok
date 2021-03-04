@@ -1,0 +1,78 @@
+{
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: bold;
+  text-align: center;
+}
+
+#article,
+#aside,
+#footer,
+#header,
+#nav {
+  padding: 20px;
+}
+
+#header {
+  background-color: #e40017;
+  Color:white;
+}
+#nav {
+  background: #484018;
+}
+
+#article {
+  text-align: left;
+  background: #f4c983;   
+}
+
+#aside {
+  background-color: #5b6d5b;
+  
+}
+
+#aside a { 
+text-decoration: none;
+  color: black;
+}
+
+#footer {
+  background: #121013;
+  color:white
+}
+
+/* menü */
+#nav {
+  display: flex;
+}
+#nav a {
+  /* ugyanaz, mint flex-grow:1; flex-shrink:1;flex-basis:auto;*/
+  flex: 1 1 auto;
+  text-decoration: none;
+  color: black;
+}
+
+/* 800px-nél nagyobb képernyő*/
+@media screen and (min-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: auto;
+  }
+  #main {
+    display: flex;
+  }
+  #nav,
+  #header {
+    order: -1;
+  }
+  #article {
+    flex: 1 1 60%;
+  }
+  #aside {
+    flex: 1 1 40%;
+  }
+}
