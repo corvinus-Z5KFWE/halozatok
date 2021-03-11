@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <style>
+        html,body {
+            height:100%;
+        }
+
+        div{
+            margin:10px;
+            border: 1px solid black;
+        }
+
+        #külső{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #kérdés_szöveg{
+
+        }
+
+        #középső {
+            display:flex;
+            flex-direction:row;
+            flex-grow:1;
+
+        }
+
+        #válaszok{
+            flex-grow:1;
+            flex-shrink:1;
+        }
+
+        #kép {
+            overflow:hidden;
+            flex-shrink:0;
+            flex-shrink:0;
+
+        }
+
+        #vezérlő {
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
+
+        #.gomb {
+            padding:20px;
+            width:80px;
+        }
+
+        #.kerdes {
+
+        }
+
+        .kattinható {
+            background-color: red;
+            color:white;
+        }
+    </style>
+
+    <div id="külső">
+        <div id="kérdés_szöveg">
+            Kérdés szövege
+        </div>
+
+    <div id="középső">
+        <div id="válaszok">
+            <div id="= "válasz1" class="kerdes kattinható"></div>
+            <div id="= "válasz2" class="kerdes kattinható jó"></div>
+            <div id="= "válasz3" class="kerdes kattinható rossz"></div>
+        </div>
+    </div>
+    <div id="kép">
+        <img id="kép1" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" alt="Ez egy kép" />
+    </div>
+    <div id="vezérlő">
+        <div class="gomb kattinható">Vissza</div>
+        <div class="gomb kattinható">Előre</div>
+    </div>
+
+</div>
+</body>
+</html>
