@@ -17,22 +17,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/11/2021 16:10:36</publishTime>
     </File>
     <File Include="HajosTeszt.deps.json">
-      <publishTime>03/11/2021 16:31:05</publishTime>
+      <publishTime>03/11/2021 16:42:01</publishTime>
     </File>
     <File Include="HajosTeszt.dll">
       <publishTime>03/11/2021 16:31:04</publishTime>
     </File>
     <File Include="HajosTeszt.exe">
-      <publishTime>03/11/2021 16:31:04</publishTime>
+      <publishTime>03/11/2021 16:42:01</publishTime>
     </File>
     <File Include="HajosTeszt.pdb">
-      <publishTime>03/11/2021 16:31:04</publishTime>
+      <publishTime>03/11/2021 16:42:01</publishTime>
     </File>
     <File Include="HajosTeszt.runtimeconfig.json">
       <publishTime>02/11/2021 16:45:11</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>03/11/2021 16:31:05</publishTime>
+      <publishTime>03/11/2021 16:42:01</publishTime>
     </File>
     <File Include="wwwroot/cv.html">
       <publishTime>02/25/2021 16:29:10</publishTime>
@@ -44,7 +44,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/04/2021 16:47:53</publishTime>
     </File>
     <File Include="wwwroot/hajo.html">
-      <publishTime>03/11/2021 16:29:31</publishTime>
+      <publishTime>03/11/2021 16:40:33</publishTime>
     </File>
     <File Include="wwwroot/htmlpage.html">
       <publishTime>02/18/2021 16:27:07</publishTime>
