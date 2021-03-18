@@ -57,6 +57,22 @@ window.onload = () => {
     }
 }    
 
+//window.onload = () => {
+//    let haromszog = document.getElementById("pascal;")
+//    for (var pascalsor = 0; pascalsor < length; pascalsor++) {
+//        let sorsor = document.createElement("pascal")
+//        sorsor.classList.add("pascal")
+//        haromszog.appendChild(pascalsor)
+//        for (var pascaloszlop = 0; pascaloszlop < length; pascaloszlop++) {
+//            let oszloposzlop = document.createElement("pascal")
+//            oszloposzlop.classList("pascalelem")
+//            oszloposzlop.innerHTML = `${sor}:${oszlop}`
+//            oszloposzlop.appendChild(sorsor)
+//            //var p = faktorialis(pascalsor) / (faktorialis(pascaloszlop) * (faktorialis(pascalsor - pascaloszlop)));
+//            //cuccli.innerText = (p)
+//        }
+//    }
+//}
 
 
 
