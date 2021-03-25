@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <ol id="ide">
+
+    </ol>
+    <script>
+
+        fetch("/questions.json")
+            .then(r => r.json())
+            .then(d => adatErkezett(d));
+
+        function adatErkezett(adat) {
+            let ide = document.getElementById("ide");
+            console.log(`${adat.length} kérdés érkezett`)
+
+            for (var i = 0; i < adat.length; i++) {
+                console.log(adat[i].questionText)
+                let elem = document.createElement("ol")
+                elem.innerHTML = adat[i].questionText
+                ide.appendChild(elem)
+            }
+        }
+
+    </script>
+</body>
+</html>
