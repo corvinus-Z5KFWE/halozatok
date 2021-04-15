@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script src="hetedik.js"></script>
 </head>
 
 <body>
@@ -69,7 +70,7 @@
         }
 
         .kattinható {
-            background-color:#004d4d;
+            background-color: black;
             color:white;
             cursor:pointer;
         }
@@ -77,16 +78,18 @@
         .kerdes {
             padding: 10px;
             border-radius: 10px;
+            background-color: white;
+            color: black;
         }
 
         .jó {
-            background-color: #80ffbf;
-            color: white;
+            background-color: green;
+            color: black;
         }
 
         .rossz {
-            background-color: #ff3333;
-            color: white;
+            background-color: red;
+            color: black;
         }
 
     </style>
@@ -98,18 +101,18 @@
 
         <div id="középső">
             <div id="válaszok">
-                <div id="= " válasz1" class="kerdes kattinható">Válasz 1</div>
-                <div id="= " válasz2" class="kerdes kattinható jó">Válasz2</div>
-                <div id="= " válasz3" class="kerdes kattinható rossz">Válasz3</div>
+                <div id="válasz1" onclick="szinezd(1)"  class="kerdes kattinható" >Válasz1</div>
+                <div id="válasz2" onclick="szinezd(2)" class="kerdes kattinható" >Válasz2</div>
+                <div id="válasz3" onclick="szinezd(3)" class="kerdes kattinható" >Válasz3</div>
             </div>
             <div id="kép">
-                <img id="kép1" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" alt="Ez egy kép" />
+                <img id="kép2" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" alt="Ehhez a kérdéshez sajnos nem tartozik kép" />
             </div>
         </div>
-    <div id="vezérlő">
-        <div class="gomb kattinható">Vissza</div>
-        <div class="gomb kattinható">Előre</div>
-    </div>
+        <div id="vezérlő">
+            <div class="gomb kattinható" id="vissza" onclick="előző()">Vissza</div>
+            <div class="gomb kattinható" id="következő" onclick="következő()">Előre</div>
+        </div>
 </div>
 </body>
 </html>
