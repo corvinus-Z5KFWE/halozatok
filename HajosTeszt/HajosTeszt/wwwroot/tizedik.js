@@ -1,20 +1,50 @@
-﻿window.onload = kérdésBetöltés()
+﻿window.onload = init;
 
 var kérdés;
+var hotList = [];           //Az éppen gyakoroltatott kérdések listája 
+var questionsInHotList = 3; //Ez majd 7 lesz, teszteléshez jobb a 3. 
+var displayedQuestion;      //A hotList-ből éppen ez a kérdés van kint
+var numberOfQuestions;      //Kérdések száma a teljes adatbázisban
+var nextQuestion = 1;       //A következő kérdés száma a teljes listában
 
 let i = 1;
 
-function kérdésBetöltés() {
-    fetch(`/questions/1`)
-        .then(response => {
-            if (!response.ok) {
-                console.error(`Hibás válasz: $ {response.status}`)
+function kérdésBetöltés(questionNumber, destination) {
+    fetch(`/questions/${questionNumber}`)
+        .then(
+            result => {
+                if (!result.ok) {
+                    console.error(`Hibás letöltés: ${response.status}`)
+                }
+                else {
+                    return result.json()
+                }
             }
-            else {
-                return response.json()
+        )
+        .then(
+            q => {
+                hotList[destination].question = q;
+                hotList[destination].goodAnswers = 0;
+                console.log(`A ${questionNumber}. kérdés letöltve a hot list ${destination}. helyére`)
             }
-        })
-        .then(data => kérdésMegjelenítés(data));
+        );
+}
+
+function init() {
+    for (var i = 0; i < questionsInHotList; i++) {
+        let q = {
+            question: {},
+            goodAnswers: 0
+        }
+        hotList[i] = q;
+    }
+
+    //Első kérdések letöltése
+    for (var i = 0; i < questionsInHotList; i++) {
+        console.log("***" + nextQuestion)
+        kérdésBetöltés(nextQuestion, i);
+        nextQuestion++;
+    }
 }
 
 /*function letöltés() {
@@ -30,8 +60,9 @@ function kérdésBetöltés() {
     }
 }*/
 
-function kérdésMegjelenítés(kérdés) {
+function kérdésMegjelenítés() {
 
+    let kérdés = hotList[displayedQuestion].question;
     console.log(kérdés);
     document.getElementById("kérdés_szöveg").innerText = kérdés.questionText
     document.getElementById("válasz1").innerText = kérdés.answer1
@@ -48,7 +79,9 @@ function kérdésMegjelenítés(kérdés) {
 
     document.getElementById("gomb2").onclick = function előre() {
         visszaszín();
-        i++;
+        displayedQuestion++;
+        if (displayedQuestion == questionsInHotList) displayedQuestion = 0;
+        kérdésMegjelenítés()
         fetch('/questions/' + (i))
             .then(response => {
                 if (!response.ok) {
@@ -59,6 +92,8 @@ function kérdésMegjelenítés(kérdés) {
                 }
             })
             .then(data => kérdésMegjelenítés(data));
+        
+        
     }
     document.getElementById("gomb1").onclick = function vissza() {
         visszaszín();
@@ -91,30 +126,40 @@ function kérdésMegjelenítés(kérdés) {
     document.getElementById("válasz1").onclick = function válasz1() {
         if (kérdés.correctAnswer == 1) {
             document.getElementById("válasz1").style.backgroundColor = "green";
+            hotList[destination].goodAnswers++;
         }
         else {
             document.getElementById("válasz1").style.backgroundColor = "red";
+            hotList[destination].goodAnswers = 0;
         }
     }
     document.getElementById("válasz2").onclick = function válasz2() {
         if (kérdés.correctAnswer == 2) {
             document.getElementById("válasz2").style.backgroundColor = "green";
+            hotList[destination].goodAnswers++;
         }
         else {
             document.getElementById("válasz2").style.backgroundColor = "red";
+            hotList[destination].goodAnswers = 0;
         }
     }
     document.getElementById("válasz3").onclick = function válasz3() {
         if (kérdés.correctAnswer == 3) {
             document.getElementById("válasz3").style.backgroundColor = "green";
+            hotList[destination].goodAnswers++;
         }
         else {
             document.getElementById("válasz3").style.backgroundColor = "red";
+            hotList[destination].goodAnswers = 0;
         }
     }
 
 
 }
+
+
+
+
 
 /*function kérdésMegjelenítés(k) {
     document.getElementById("kérdés_szöveg").innerHTML = kérdés[k].questionText;
@@ -133,7 +178,7 @@ function kérdésMegjelenítés(kérdés) {
         document.getElementById("kép2").style.visibility = 'hidden';
     }
 
- 
+
 
 
 
