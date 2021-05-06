@@ -3,100 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="hetedik.js"></script>
+    <link href="stilus.css" rel="stylesheet" />
+    <script src="tizedik.js"></script>
 </head>
-
 <body>
-
-    <style>
-        html,body {
-            height:100%;
-            background-color:#e6ffff;
-        }
-
-        div{
-            margin:10px;
-            border: 1px solid black;
-        }
-
-        #külső{
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #kérdés_szöveg{
-            background-color: aqua;
-        }
-
-        #középső {
-            display:flex;
-            flex-direction:row;
-            flex-grow:1;
-        }
-
-        #válaszok{
-            flex-grow:1;
-            flex-shrink:1;
-        }
-
-        #kép {
-            overflow:hidden;
-            flex-shrink:0;
-            flex-shrink:0;
-
-        }
-
-        #vezérlő {
-            display:flex;
-            flex-direction:row;
-            justify-content: space-between;
-        }
-
-        #gomb {
-            padding:20px;
-            width:80px;
-            cursor: pointer;
-        }
-
-        .gomb:hover {
-            background-color: #001a1a;
-            color: white;
-        }
-
-        #kerdes {
-
-        }
-
-        .kattinható {
-            background-color: black;
-            color:white;
-            cursor:pointer;
-        }
-
-        kattintható:hover {
-            background-color: blue;
-            color: white;
-        }
-
-        .kerdes {
-            padding: 10px;
-            border-radius: 10px;
-            background-color: white;
-            color: black;
-        }
-
-        .jó {
-            background-color: green;
-            color: black;
-        }
-
-        .rossz {
-            background-color: red;
-            color: black;
-        }
-
-    </style>
 
     <div id="külső">
         <div id="kérdés_szöveg">
@@ -105,18 +15,18 @@
 
         <div id="középső">
             <div id="válaszok">
-                <div id="válasz1" onclick="szinezd(1)"  class="kerdes kattinható" >Válasz1</div>
-                <div id="válasz2" onclick="szinezd(2)" class="kerdes kattinható" >Válasz2</div>
-                <div id="válasz3" onclick="szinezd(3)" class="kerdes kattinható" >Válasz3</div>
+                <div id="válasz1" onclick="választás(1)" class="kerdes kattintható">Válasz 1</div>
+                <div id="válasz2" onclick="választás(2)" class="kerdes kattintható jó">Válasz 2</div>
+                <div id="válasz3" onclick="választás(3)" class="kerdes kattintható rossz">Válasz 3</div>
             </div>
             <div id="kép">
-                <img id="kép2" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" alt="Ehhez a kérdéshez sajnos nem tartozik kép" />
+                <img id="kép1" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" />
             </div>
         </div>
         <div id="vezérlő">
-            <div class="gomb kattinható" id="vissza" onclick="előző()">Vissza</div>
-            <div class="gomb kattinható" id="következő" onclick="következő()">Előre</div>
+            <div id="gomb1" class="gomb kattintható">Vissza</div>
+            <div id="gomb2" class="gomb kattintható">Előre</div>
         </div>
-</div>
+    </div>
 </body>
 </html>
