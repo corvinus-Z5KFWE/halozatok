@@ -1,11 +1,14 @@
 ﻿html, body {
     height: 100%;
+    background: linear-gradient(#e66465, #9198e5);
 }
 
 div {
     margin: 10px;
-    border: 1px solid lightblue;
+    border: 5px solid lightblue;
+    border-radius: 6px;
 }
+
 
 #külső {
     height: 100%;
@@ -14,23 +17,33 @@ div {
 }
 
 #kérdés_szöveg {
+    color: white;
+    font-size: 20px;
+    background-color: deepskyblue;
 }
 
 #középső {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+    background: linear-gradient(#e66465, #9198e5);
 }
 
 #válaszok {
     flex-grow: 1;
     flex-shrink: 1;
+    background: linear-gradient(#e66465, #9198e5);
+    color: white;
+    cursor: pointer;
 }
+
+
 
 #vezérlő {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color: white;
 }
 
 #kép {
@@ -42,9 +55,34 @@ div {
 .gomb {
     padding: 20px;
     width: 80px;
+    background-color: deepskyblue;
+    color:white;
+    cursor:pointer;
+}
+
+.gomb:hover {
+    background-color: fuchsia;
+    color:white;
 }
 
 .kerdes {
+    font-size: 20px;
+    color: white;
+    background-color: deepskyblue;
+}
+
+.kerdes:hover {
+    background-color: fuchsia;
+}
+
+.jó {
+    background-color: forestgreen;
+    color:white;
+}
+
+.rossz {
+    background-color: darkred;
+    color: white;
 }
 
 .kattintható:hover {
