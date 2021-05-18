@@ -13,17 +13,17 @@ namespace HajosTeszt.Controllers
     [ApiController]
     public class JokeController : ControllerBase
     {
-        // GET: api/<JokeController>
+        // GET: api/jokes
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Joke> Get()
         {
             FunnyDatabaseContext context = new FunnyDatabaseContext();
             return context.Jokes.ToList();
         }
 
-            // GET api/<jokes/5
-            [HttpGet("{id}")]
-        public string Get(int id)
+        // GET api/jokes/5
+        [HttpGet("{id}")]
+        public Joke Get(int id)
         {
             FunnyDatabaseContext context = new FunnyDatabaseContext();
             var keresettVicc = (from x in context.Jokes
@@ -32,9 +32,9 @@ namespace HajosTeszt.Controllers
             return keresettVicc;
         }
 
-            // POST api/jokes
-            [HttpPost]
-        public void Post([FromBody] string value)
+        // POST api/jokes
+        [HttpPost]
+        public void Post([FromBody] Joke újVicc)
         {
             FunnyDatabaseContext context = new FunnyDatabaseContext();
             context.Jokes.Add(újVicc);
@@ -47,7 +47,7 @@ namespace HajosTeszt.Controllers
         {
         }
 
-        // DELETE api/jokes65
+        // DELETE api/jokes/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
@@ -57,34 +57,5 @@ namespace HajosTeszt.Controllers
                                 select x).FirstOrDefault();
             context.Remove(törlendőVicc);
         }
-
-        document.getElementById("addButton").addEventListener("click", () => {
-
-            //Ezt az objektumot fogjuk átküldeni
-            let data = {
-        text: document.getElementById("jokeText").value
-    }
-
-
-        fetch("api/jokes",
-            {
-        method: 'POST',
-            headers:
-            {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-            }
-    ).then(x => {
-            if (x.ok)
-            {
-                alert("Siker");
-
-            }
-            else
-            {
-                alert("Kudarc");
-            }
-        });
     }
 }
