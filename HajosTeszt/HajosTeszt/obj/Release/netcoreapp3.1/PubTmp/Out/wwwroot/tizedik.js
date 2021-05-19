@@ -42,7 +42,7 @@ function init() {
     }
 
     // kezdő kérdéslista letöltése
-    if (hotList.length === 0) {
+    if ( hotList.length === 0) {
         for (let i = 0; i < questionsInHotList; i++) {
             kérdésBetöltés(nextQuestion, i);
             nextQuestion++;

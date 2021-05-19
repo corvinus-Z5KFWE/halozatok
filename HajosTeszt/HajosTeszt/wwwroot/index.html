@@ -1,18 +1,256 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Titan+One&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gyetvai Marcell">
     <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0;
+            font-family: sans-serif;
+            object-fit: contain;
+            justify-content: center;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .row {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        header {
+            padding: 2px;
+            margin: 0px;
+            margin-bottom: 5px;
+            color: #fff;
+            background: rgb(181,241,237);
+            background: linear-gradient(0deg, rgba(181,241,237,1) 6%, rgba(3,89,83,1) 100%);
+            text-align: center;
+            font-size: 1.6em;
+        }
+
+        footer {
+            padding: 2px;
+            margin: 0px;
+            margin-bottom: 0px;
+            color: #fff;
+            background: rgb(181,241,237);
+            background: linear-gradient(0deg, rgba(181,241,237,1) 6%, rgba(3,89,83,1) 100%);
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .countryList {
+            border-radius: 10px;
+            object-fit: contain;
+            background: rgb(127,254,243);
+            background: linear-gradient(90deg, rgba(127,254,243,1) 0%, rgba(255,255,255,1) 50%, rgba(127,254,243,1) 100%);
+            text-align: center;
+            font-size: 16px;
+            display: inline-block;
+            margin-left: 60px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+
+        .infok {
+            border-radius: 10px;
+            object-fit: contain;
+            background: rgb(127,254,243);
+            background: linear-gradient(90deg, rgba(127,254,243,1) 0%, rgba(255,255,255,1) 50%, rgba(127,254,243,1) 100%);
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+            padding: 5px;
+            margin: auto;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .gombok {
+            border-radius: 10px;
+            object-fit: contain;
+            background: rgb(127,254,243);
+            background: linear-gradient(90deg, rgba(127,254,243,1) 0%, rgba(255,255,255,1) 50%, rgba(127,254,243,1) 100%);
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+            margin: auto;
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        [class*="col-"] {
+            float: left;
+            width: 100%;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        @media only screen and (min-width: 768px) {
+            /* számítógép */
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+        }
+    </style>
 </head>
 <body>
-    Csáó!
-    <p>Üdvözlet</p>
-    <p>A hajó.html eléréshez kattints <a href="hajo.html">ide</a></p>
-    <p>A cv.html eléréshez kattints <a href="cv.html">ide</a></p>
-    <p>A cv2.html eléréshez kattints <a href="cv2.html">ide</a></p>
-    <p>A javascript gyak eléréséhez kattins <a href="jsgyak.html">ide</a></p>
-    <p>A pascalháromszög eléréséhez kattins <a href="pascal.html">ide</a></p>
-    <p>A 7. óra gyakorlásának megtekintéséhez kattints <a href="7_gyakorlas.html">ide</a></p>
-    <p>A jokes.html megtekintéséhez kattints <a href="jokes.html">ide</a></p>
+    <header>
+        <h1 style="font-family: 'Titan One', cursive">Számítógép-hálózatok beadandó</h1>
+        <h3 style="font-family: 'Titan One', cursive">A beadandót készítette Gyetvai Marcell, Z5KFWE</h3>
+    </header>
+
+    <form>
+        <div class="row">
+            <div id="countryList" class="col-5 countryList">
+                <h2>Országok nevei:</h2>
+                <br />
+            </div>
+
+            <div class="col-4 infok">
+                <h3> A félév további anyagai:</h3>
+                <br />
+                <p>A hajó.html eléréshez kattints <a href="hajo.html">ide</a></p>
+                <p>A cv.html eléréshez kattints <a href="cv.html">ide</a></p>
+                <p>A cv2.html eléréshez kattints <a href="cv2.html">ide</a></p>
+                <p>A javascript gyak eléréséhez kattins <a href="jsgyak.html">ide</a></p>
+                <p>A pascalháromszög eléréséhez kattins <a href="pascal.html">ide</a></p>
+                <p>A 7. óra gyakorlásának megtekintéséhez kattints <a href="7_gyakorlas.html">ide</a></p>
+                <p>A jokes.html megtekintéséhez kattints <a href="jokes.html">ide</a></p>
+                <br />
+                <p>API végpont létrehozása a tábla rekordjainak számának megjelenítése, működése elérhető <a href="https://localhost:44350/api/name/countries/count" target="_blank">itt</a> </p>
+                <br />
+                <p>API végpont létrehozása egy rekord lekérdezésére kulcs alapján, elérhető pl.:<a href="https://localhost:44350/api/name/136" target="_blank">itt</a></p>
+                <br />
+                <p>API végpont létrehozása egy rekord törlésére kulcs alapján: A restmanben törölhető a következő URL megadásával: https://localhost:44350/api/name/228 </p>
+
+            </div>
+
+            <div class="col-2 gombok">
+                <input id="countryText" type="text" placeholder="Írd be az ország nevét..." />
+                <button id="addButton">Új ország felvétele</button>
+            </div>
+
+
+
+        </div>
+
+        <footer class="col-12">
+            Az oldal oktatási célból a Budapesti Corvinus Egyetem Számítógép-hálózatok órájára készült.
+        </footer>
+
+    </form>
+    <script>
+
+        window.onload = () => {
+            orszagBetoltes();
+        }
+
+        document.getElementById("addButton").addEventListener("click", () => {
+
+            //Ezt az objektumot fogjuk átküldeni
+            let data = {
+                countryText: document.getElementById("countryText").value
+            }
+
+
+            fetch("api/name",
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }
+            ).then();
+
+        });
+
+        function orszagBetoltes() {
+            fetch('api/name')
+                .then(result => {
+                    if (!result.ok) {
+                        console.error(`Hibás letöltés: ${result.status}`);
+                        return null;
+                    }
+                    else {
+                        return result.json();
+                    }
+                })
+                .then(data => {
+                    for (var i = 0; i < data.length; i++) {
+                        document.getElementById("countryList").innerHTML += data[i].name += "<br/>"
+                    }
+                })
+        }
+    </script>
 </body>
 </html>
